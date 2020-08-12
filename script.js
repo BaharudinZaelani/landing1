@@ -61,6 +61,9 @@ if (width < 560) {
     if (h >= 15) {
       data.innerHTML = "Selamat Sore <b>" + nama + "</b>";
     }
+    if (h >= 20) {
+      data.innerHTML = "Selamat Malam <b>" + nama + "</b>";
+    }
   }
   function checkTime(i) {
     if (i < 10) {
@@ -158,7 +161,7 @@ if (width < 560) {
                               button.innerHTML = "Klik Lagi ?";
                               button.style.opacity = 1;
                               sec2Edit.style.opacity = 1;
-                            }, 2200);
+                            }, 1300);
                           }, 2200);
                         }, 28000);
                       }, 3000);
