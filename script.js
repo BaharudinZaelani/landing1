@@ -3,7 +3,8 @@ const verDua = document.querySelector(".ver-dua");
 const data = document.querySelector(".sec4 h3");
 let nama = prompt("Anda Siapa ?");
 const width = screen.width;
-console.log(width);
+
+
 // let nama = 'zawhax';
 
 const haxo = (document.querySelector(".sec1 .anjim").innerHTML = nama);
@@ -71,11 +72,19 @@ if (width < 560) {
     } // add zero in front of numbers < 10
     return i;
   }
-
+  let quotes = [
+    'Kamu tau gak? Kenapa kalau aku menghafal lihatnya ke atas?<br><i>soalnya kalau merem langsung kebayang wajahmu.</i>',
+    'Aku hanya ingin hidup cukup,<br><i>Cukup Memiliki kamu sepenuhnya.</i>',
+    'Perasaan aku ke kamu tuh kayak file Readme di setiap aplikasi, <i>selalu ada tapi ngga pernah dibaca.</i>'
+  ];
+  function randomQ(items){
+    return items[Math.floor(Math.random()*items.length)];
+  }
   const sembunyi = document.querySelector(".sembunyi");
   const jam = document.querySelector(".sec4 h1");
   const panah = document.querySelector(".tools span");
   const hax = document.querySelector(".hax span");
+  hax.innerHTML = randomQ(quotes);
   const zaw = document.querySelector(".zz div");
   const klik = document.querySelector(".hax .klik");
   klik.addEventListener("click", function () {
@@ -89,6 +98,8 @@ if (width < 560) {
           klik.style.opacity = 0;
           klik.style.marginTop = 40;
           setTimeout(function () {
+            // hax.innerHTML = randomQ(quotes);
+
             klik.style.marginTop = 0;
             klik.style.opacity = 1;
             klik.innerHTML = "Boleh di klik !";
@@ -104,6 +115,7 @@ if (width < 560) {
               const kkl = document.querySelector("video");
 
               button.addEventListener("click", function () {
+                hax.innerHTML = randomQ(quotes);
                 verDua.style.display = "grid";
                 verDua.style.opacity = 1;
                 kkl.play();
@@ -180,6 +192,7 @@ if (width < 560) {
     sembunyi.classList.toggle("sembunyi");
   });
 }
+
 
 if (width > 560) {
   document.body.innerHTML =
