@@ -2,8 +2,8 @@ const de = document.querySelector('.demo');
 const verDua = document.querySelector('.ver-dua');
 const data = document.querySelector('.sec4 h3');
 const width = screen.width;
-console.log(width);
-// let nama = prompt('Anda Siapa ?');
+// console.log(width);
+let nama = prompt('Anda Siapa ?');
 let nama = 'zawhax';
 
 if ( width < 560 ) {
