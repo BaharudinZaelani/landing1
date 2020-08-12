@@ -11,6 +11,22 @@ body {
 .scroll {
 	overflow: scroll !important;
 }
+.tbl {
+	display: none;
+    padding: 4px 20px;
+    background-color: white;
+    font-size: 1rem;
+    border: 1px solid black;
+    border-radius: 2px;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: 0.4s;
+}
+.tbl:hover {
+	background-color: black;
+	border: 1px solid grey;
+	color: white;
+}
 .tools {
 	display: flex;
 	flex-direction: column;
@@ -31,10 +47,11 @@ body {
 	margin-right: -60px !important;
 }
 .tools a {
+    text-shadow: 0 0 20px white;
 	transition: 0.5s;
 	font-family: cursive;
 	margin: 4px 10px;
-	color: black;
+	color: #007bff;
 	font-weight: bold;
 	font-size: 1.5rem;
 }
@@ -45,8 +62,8 @@ body {
 	text-align: center;
 	margin-top: 660px;
 }
-.btn.btn-secondary {
-	display: none;
+.anjim {
+	text-transform: uppercase;
 }
 /*
 ===================================================================
@@ -284,6 +301,7 @@ Versi dua
 ===================================================================
 */
 .ver-dua {
+	transition: all 0.5s;
 	background-color: black;
 	color: white;
 	position: absolute;
@@ -295,6 +313,7 @@ Versi dua
 	grid-template-rows: 100vh;
 	justify-content: center;
 	z-index: 9999;
+	opacity: 0;
 }
 .ver-dua span:nth-child(1){
 	background-color: black;
@@ -334,6 +353,15 @@ Versi dua
 	right: -200px;
 	transform: rotate(20deg);
 	align-items: center;
+}
+.ver-dua span:nth-child(5){
+	opacity: 0;
+	transition: 0.4s;
+	position: absolute;
+    font-size: 2rem;
+    text-align: center;
+    width: 100%;
+    font-weight: bold;
 }
 video {
 	width: 700px;
